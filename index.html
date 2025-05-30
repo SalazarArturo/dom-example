@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listado de Nombres</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body onload="actualizarLista()">
+    <h1>Formulario de Personas</h1>
+    <hr />
+    <div class="form-group">
+      <label>Ingrese un nombre</label><br />
+      <input type="text" id="input-nombre" />
+      <div class="msg-error" id="msg-error-nombre"></div>
+    </div>
+    <div class="form-group">
+      <label>Ingrese la edad</label><br />
+      <input type="number" id="input-edad" min="0" />
+      <div class="msg-error" id="msg-error-edad"></div>
+    </div>
+    <div class="form-group">
+        <label for="">Ingrese su e-mail</label><br>
+        <input type="email" name="correo" id="input-correo">
+        <div class="msg-error" id="msg-error-email"></div>
+    </div>
+    <input
+      type="button"
+      class="btn-save"
+      value="Agregar persona"
+      onclick="agregarPersona()"
+    />
+
+    <h1>Listado de Personas</h1>
+    <hr />
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Eliminar</th>
+          <th>Nombre</th>
+          <th>Edad</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody id="lista-nombres">
+        <tr>
+          <td colspan="3">No hay nombres registrados</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
